@@ -8,11 +8,6 @@ let min = 0;
 let interval;
 let randomN;
 
-foxy.addEventListener("ended", () => {  
-    foxy.style.display = 'none';
-});
-
-
 const startGame = () =>
 {
     interval = setInterval(() => {
@@ -22,11 +17,6 @@ const startGame = () =>
         {
             min++;
             sec = 0;
-        }
-        if(randomN == 0 && foxy.style.display == 'none')
-        {
-            foxy.style.display = 'block';
-            foxy.play();
         }
         timer.innerText = String(min).padStart(2, '0') + ":" + String(sec).padStart(2, '0');
     }, 1000);
